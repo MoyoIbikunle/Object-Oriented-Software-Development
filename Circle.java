@@ -1,37 +1,30 @@
-// Author : Moyo Ibikunle
-// Date : November 2025
-// Purpose : This class defines a Circle object that extends the Point class.
-// It adds a radius attribute to represent a circle's size
-public class Circle extends Point
-{
-    private int radius;
+//Name : Moyo Ibikunle
+//Date: 21/11/2025
+//Lab: Lab 8
 
-    // Constructor: initializes the x and y coordinates and the radius of the circle
-    public Circle(int theX, int theY, int theRadius)
+public class Circle extends TwoDShape
+{
+
+
+    private double radius;
+
+    public Circle(String name, String colour, double radius)
         {
-            // Calls the constructor of the Point superclass to set x and y
-            super(theX,theY);
-            //calls both methods not declaring
-            setRadius(theRadius);
-            getRadius();
-           
+  		super(name, colour); 
+            this.radius = radius;
         }
 
-        public void setRadius(int theRadius)
+        public double area()
             {
-                radius = theRadius;
+               return Math.PI * radius * radius;
             }
 
-        public int getRadius()
-            {
-                return radius;
-            }
+    	public String toString()
+  	{
+  		return (super.toString() + "\nRadius = " + radius);
+  	}
 
-        // Returns a string of the circle's details, showing x, y, and radius values
-        public String toString()
-            {
-            String coordinates;
-            coordinates = "(" + x + "," + y + "," + radius + ")";
-            return coordinates;
-            }
+
+
+
 }

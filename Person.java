@@ -1,23 +1,23 @@
-public class Person {
-	   // Variables
-	   private String name;
-	   private String address;
-	   
-	   // Constructors
-	   public Person(String name, String address) {
-	      this.name = name;
-	      this.address = address;
-	   }
-	   
-	   // Getters & Setters
-	   public String getName() {
-	      return name;
-	   }
-	   public String getAddress() {
-	      return address;
-	   }
-	   //toString
-	   public String toString() {
-	      return name + "(" + address + ")";
-	   }
-	}
+//Name : Moyo Ibikunle
+//Date: 21/11/2025
+//Lab: Lab 8
+public abstract class Person
+{
+
+    String name;
+
+    public Person (String name)
+        {
+            this.name = name;
+        }
+
+    public String getName()
+        {
+                return name;
+        }
+
+    public abstract String getDescription();
+        
+
+
+}
